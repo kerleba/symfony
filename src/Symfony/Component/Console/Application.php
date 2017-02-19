@@ -623,12 +623,12 @@ class Application
     }
 
     /**
-     * Renders a caught exception.
+     * Renders a caught exception or throwable.
      *
-     * @param \Exception      $e      An exception instance
+     * @param \Exception|\Throwable $e An exception or throwable instance
      * @param OutputInterface $output An OutputInterface instance
      */
-    public function renderException(\Exception $e, OutputInterface $output)
+    public function renderException($e, OutputInterface $output)
     {
         $output->writeln('', OutputInterface::VERBOSITY_QUIET);
 
